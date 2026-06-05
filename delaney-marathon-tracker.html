@@ -3,882 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delaney's Marathon Journey • Charlotte 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<title>Delaney's Marathon Training · Charlotte 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --cream:#F8F4EE;--cream-dark:#EDE6D8;--cream-border:#DDD3C0;
-  --sage:#7A9E7E;--sage-light:#B5CEAF;--sage-dark:#4E7253;--sage-pale:#EBF3EB;
-  --sand:#C09870;--sand-light:#E8D8C0;--sand-pale:#F5EDDF;
-  --brown:#3D3025;--brown-mid:#6B5A48;--brown-light:#9A8A78;
-  --alert:#C4614A;--alert-pale:#FAF0EE;
-  --white:#FFFFFF;
-  --shadow:0 2px 12px rgba(61,48,37,.08);
-  --shadow-md:0 4px 20px rgba(61,48,37,.14);
-}
-body{background:var(--cream);font-family:'Lato',sans-serif;color:var(--brown);line-height:1.6;}
+  :root{
+    --cream:#FBF6EC; --paper:#FFFDF7; --ink:#3C382F; --soft-ink:#6E6757;
+    --line:#E7DDCB; --sage:#7E9070; --sage-deep:#5F7256; --clay:#B5734F;
+    --wheat:#D8B274; --taper:#94A6A2; --gold:#C08A4A;
+    --shadow:0 1px 2px rgba(60,56,47,.04),0 8px 24px rgba(60,56,47,.06);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Karla',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:var(--sans); color:var(--ink); line-height:1.5;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #FFFCF3 0%, rgba(255,252,243,0) 60%),
+      repeating-linear-gradient(135deg, rgba(216,178,116,.025) 0 2px, transparent 2px 7px),
+      var(--cream);
+    -webkit-font-smoothing:antialiased; padding:0 0 64px;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
 
-/* ── HEADER ── */
-.site-header{background:linear-gradient(140deg,#3D6B42 0%,#7A9E7E 55%,#5A8060 100%);color:#fff;text-align:center;padding:3rem 2rem 2.5rem;position:relative;overflow:hidden;}
-.site-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 18px,rgba(255,255,255,.035) 18px,rgba(255,255,255,.035) 20px);}
-.header-inner{position:relative;z-index:1;}
-.header-eye{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:.5rem;}
-.header-title{font-family:'Dancing Script',cursive;font-size:3.8rem;font-weight:700;line-height:1.05;text-shadow:0 2px 10px rgba(0,0,0,.2);}
-.header-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,.82);margin-top:.4rem;}
-.header-rule{display:flex;align-items:center;justify-content:center;gap:.8rem;margin:1.1rem 0;color:rgba(255,255,255,.4);}
-.header-rule::before,.header-rule::after{content:'';flex:1;max-width:70px;height:1px;background:rgba(255,255,255,.35);}
-.header-rule span{font-size:.9rem;opacity:.6;}
-.countdown{display:flex;justify-content:center;gap:2.2rem;flex-wrap:wrap;margin-top:1.1rem;}
-.cd-item{text-align:center;}
-.cd-num{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;display:block;line-height:1;}
-.cd-lbl{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem;}
-.cd-sep{color:rgba(255,255,255,.25);font-size:1.4rem;line-height:2.3rem;}
-.header-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.3rem 1rem;border-radius:20px;margin-top:1rem;}
+  /* ---- Header ---- */
+  header{padding:46px 0 22px;text-align:center}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--clay);font-weight:700}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,9vw,58px);line-height:1.02;margin:10px 0 4px;letter-spacing:.01em}
+  .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--soft-ink)}
+  .rule{width:54px;height:1px;background:var(--clay);margin:18px auto;opacity:.5}
 
-/* ── LAYOUT ── */
-.main{max-width:920px;margin:0 auto;padding:2rem 1.5rem 5rem;}
-.section-head{display:flex;align-items:center;gap:1rem;margin:2.75rem 0 1.1rem;}
-.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;white-space:nowrap;}
-.section-rule{flex:1;height:1px;background:var(--cream-border);}
+  /* ---- Stat band ---- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 6px}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 8px;text-align:center;box-shadow:var(--shadow)}
+  .stat .num{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1;color:var(--sage-deep)}
+  .stat .lbl{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft-ink);margin-top:6px}
+  @media(max-width:460px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* ── GLANCE CARDS ── */
-.glance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;}
-.gc{background:var(--white);border:1px solid var(--cream-border);border-radius:8px;padding:1.4rem 1.2rem;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden;}
-.gc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sage);}
-.gc.sand::before{background:var(--sand);}
-.gc.alert::before{background:var(--alert);}
-.gc-lbl{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brown-light);margin-bottom:.55rem;}
-.gc-num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;line-height:1;}
-.gc-sub{font-size:.78rem;color:var(--brown-light);margin-top:.3rem;}
+  /* ---- Progress ---- */
+  .progwrap{margin:20px 0 8px}
+  .progmeta{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.04em;color:var(--soft-ink);margin-bottom:7px}
+  .progbar{height:9px;background:#EFE7D6;border-radius:99px;overflow:hidden}
+  .progfill{height:100%;background:linear-gradient(90deg,var(--sage),var(--wheat));border-radius:99px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
 
-/* ── PROGRESS BAR ── */
-.prog-card{background:var(--white);border:1px solid var(--cream-border);border-radius:8px;padding:1.4rem 1.5rem;box-shadow:var(--shadow);}
-.prog-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem;}
-.prog-label{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;}
-.prog-nums{font-size:.82rem;color:var(--brown-mid);}
-.prog-track{background:var(--cream-dark);border-radius:100px;height:11px;overflow:hidden;}
-.prog-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--sage-dark),var(--sage));transition:width 1.2s ease;}
-.prog-phases{display:flex;gap:4px;margin-top:.55rem;flex-wrap:wrap;}
-.pp{font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;}
-.pp.base{background:var(--sand-light);color:#7A6040;}
-.pp.dev{background:var(--sage-pale);color:var(--sage-dark);}
-.pp.peak{background:#E4EDE4;color:#3A6040;}
-.pp.taper{background:#EDEAF5;color:#60609A;}
+  /* ---- Coaching callout ---- */
+  .callout{background:linear-gradient(180deg,#F4F6EE,#F0F3E8);border:1px solid #DCE3CF;border-left:4px solid var(--sage);border-radius:12px;padding:15px 17px;margin:22px 0}
+  .callout h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--sage-deep);margin-bottom:3px}
+  .callout p{font-size:14px;color:var(--soft-ink)}
+  .callout p b{color:var(--ink)}
 
-/* ── COACHING ALERT ── */
-.alert-card{background:var(--alert-pale);border:1px solid #E8B0A0;border-left:4px solid var(--alert);border-radius:8px;padding:1.1rem 1.4rem;}
-.alert-title{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;color:var(--alert);margin-bottom:.3rem;}
-.alert-body{font-size:.82rem;color:#7A3A28;line-height:1.65;}
-.alert-body strong{color:var(--alert);}
+  /* ---- Filters ---- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:24px 0 8px}
+  .filt{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--soft-ink);background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:99px;cursor:pointer;transition:.18s}
+  .filt[data-on="1"]{color:#fff;border-color:transparent}
+  .filt.all[data-on="1"]{background:var(--ink)}
+  .filt.base[data-on="1"]{background:var(--sage)}
+  .filt.dev[data-on="1"]{background:var(--gold)}
+  .filt.peak[data-on="1"]{background:var(--clay)}
+  .filt.taper[data-on="1"]{background:var(--taper)}
 
-/* ── CURRENT WEEK ── */
-.week-hdr{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;flex-wrap:wrap;}
-.week-hdr-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;}
-.badge{font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.22rem .65rem;border-radius:20px;}
-.badge-base{background:var(--sand-light);color:#7A6040;}
-.badge-development{background:var(--sage-pale);color:var(--sage-dark);}
-.badge-peak{background:#E4EDE4;color:#3A6040;}
-.badge-taper{background:#EDEAF5;color:#60609A;}
-.runs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:1rem;}
-.run-card{border:1px solid var(--cream-border);border-radius:8px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .2s;}
-.run-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);}
-.run-card.done{border-color:var(--sage-light);}
-.run-card.today-run{border-color:var(--sand);box-shadow:0 0 0 2px var(--sand-light);}
-.run-card.unlocked{border-color:var(--cream-border);}
-.rc-top{padding:.95rem 1rem;background:var(--cream);}
-.run-card.done .rc-top{background:var(--sage-pale);}
-.run-card.today-run .rc-top{background:var(--sand-pale);}
-.rc-day{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brown-light);}
-.rc-planned{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;line-height:1;margin-top:.2rem;}
-.rc-unit{font-size:.82rem;font-weight:400;color:var(--brown-light);}
-.rc-status{display:flex;align-items:center;gap:.4rem;margin-top:.35rem;font-size:.72rem;}
-.rc-dot{width:7px;height:7px;border-radius:50%;background:var(--cream-border);flex-shrink:0;}
-.run-card.done .rc-dot{background:var(--sage);}
-.run-card.today-run .rc-dot{background:var(--sand);animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.35;}}
-.rc-status-txt{color:var(--brown-light);font-weight:700;}
-.run-card.done .rc-status-txt{color:var(--sage-dark);}
-.run-card.today-run .rc-status-txt{color:#9A6030;}
-.rc-body{padding:.8rem 1rem;background:#fff;}
-.rc-row{display:flex;justify-content:space-between;font-size:.76rem;margin-bottom:.18rem;}
-.rc-lbl{color:var(--brown-light);}
-.rc-val{font-weight:700;color:var(--brown);}
-.flag-fast{font-size:.58rem;font-weight:700;background:#FAEAE6;color:var(--alert);padding:.12rem .35rem;border-radius:3px;margin-left:.3rem;vertical-align:middle;}
-.flag-hr{font-size:.58rem;font-weight:700;background:#FAEAE6;color:var(--alert);padding:.12rem .35rem;border-radius:3px;margin-left:.3rem;vertical-align:middle;}
-.log-btn{width:100%;margin-top:.65rem;padding:.48rem;border:1px dashed var(--cream-border);background:transparent;border-radius:5px;font-family:'Lato',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown-light);cursor:pointer;transition:all .2s;}
-.log-btn:hover,.run-card.today-run .log-btn:hover{background:var(--sage-pale);border-color:var(--sage-light);color:var(--sage-dark);}
-.run-card.done .log-btn{border-style:solid;border-color:var(--sage-light);color:var(--sage-dark);}
+  /* ---- Week cards ---- */
+  section.weeks{margin-top:14px}
+  .week{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:0;margin:13px 0;overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .week::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  .week.now{border-color:var(--clay);box-shadow:0 0 0 2px rgba(181,115,79,.18),var(--shadow)}
+  .whead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:15px 17px 11px 21px;flex-wrap:wrap}
+  .wleft{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .wnum{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--ink)}
+  .wdates{font-size:12.5px;color:var(--soft-ink)}
+  .wtag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--accent);padding:3px 9px;border-radius:99px}
+  .nowtag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--clay);border:1px solid var(--clay);padding:3px 8px;border-radius:99px}
+  .downtag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft-ink);font-style:normal}
+  .wmiles{font-size:12.5px;color:var(--soft-ink);text-align:right}
+  .wmiles b{font-family:var(--serif);font-size:19px;color:var(--sage-deep)}
+  .days{border-top:1px solid var(--line)}
+  .day{display:flex;align-items:center;gap:13px;padding:11px 17px 11px 21px;border-bottom:1px solid #F1EADB}
+  .day:last-child{border-bottom:none}
+  .check{flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;background:transparent}
+  .day.done .check{background:var(--sage);border-color:var(--sage)}
+  .dname{flex:0 0 38px;font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--ink)}
+  .dbody{flex:1 1 auto;min-width:0}
+  .dplan{font-size:13.5px;color:var(--soft-ink)}
+  .dplan b{color:var(--ink);font-weight:700}
+  .dactual{font-size:13.5px;color:var(--ink)}
+  .dactual .mi{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--sage-deep)}
+  .dmeta{font-size:11.5px;color:var(--soft-ink);margin-top:1px}
+  .dmeta .hot{color:var(--clay)}
+  .dmeta .cool{color:var(--taper)}
+  .note{display:inline-block;font-size:10.5px;letter-spacing:.04em;color:var(--clay);background:#F6ECE2;border-radius:6px;padding:1px 7px;margin-left:2px}
+  .pending{opacity:.62}
 
-/* ── TRAINING LOG TABLE ── */
-.tbl-wrap{background:#fff;border:1px solid var(--cream-border);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
-.log-tbl{width:100%;border-collapse:collapse;font-size:.81rem;}
-.log-tbl th{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--brown-light);padding:.7rem 1rem;text-align:left;border-bottom:2px solid var(--cream-dark);background:var(--cream);}
-.log-tbl td{padding:.7rem 1rem;border-bottom:1px solid var(--cream-dark);vertical-align:middle;}
-.log-tbl tr:last-child td{border-bottom:none;}
-.log-tbl tr:hover td{background:var(--cream);}
-.wk-tag{font-size:.62rem;background:var(--cream-dark);color:var(--brown-mid);padding:.12rem .45rem;border-radius:10px;font-weight:700;white-space:nowrap;}
-.z4{color:var(--alert);font-weight:700;}
-.z2{color:var(--sage-dark);font-weight:700;}
-.z3{color:#B07840;font-weight:700;}
+  /* ---- Pace guide ---- */
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 19px;margin:26px 0;box-shadow:var(--shadow)}
+  .panel h2{font-family:var(--serif);font-size:27px;font-weight:600;margin-bottom:3px}
+  .panel .lede{font-size:13px;color:var(--soft-ink);margin-bottom:14px}
+  .pace{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid #F1EADB}
+  .pace:last-child{border-bottom:none}
+  .pace .t{font-weight:700;font-size:14px}
+  .pace .t span{display:block;font-weight:400;font-size:11.5px;color:var(--soft-ink);letter-spacing:.02em}
+  .pace .v{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--clay)}
 
-/* ── SCHEDULE ── */
-.sched-phase{margin-bottom:.75rem;}
-.phase-toggle{display:flex;align-items:center;justify-content:space-between;padding:.95rem 1.2rem;background:#fff;border:1px solid var(--cream-border);border-radius:8px;cursor:pointer;user-select:none;transition:background .15s;}
-.phase-toggle:hover{background:var(--cream);}
-.phase-toggle.open{border-radius:8px 8px 0 0;border-bottom-color:transparent;}
-.toggle-left{display:flex;align-items:center;gap:.7rem;}
-.toggle-title{font-family:'Playfair Display',serif;font-size:.98rem;font-weight:600;}
-.toggle-meta{font-size:.73rem;color:var(--brown-light);}
-.chevron{color:var(--brown-light);transition:transform .22s;font-size:.8rem;}
-.phase-toggle.open .chevron{transform:rotate(180deg);}
-.phase-body{display:none;border:1px solid var(--cream-border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;}
-.phase-body.open{display:block;}
-.sched-tbl{width:100%;border-collapse:collapse;font-size:.8rem;}
-.sched-tbl th{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown-light);padding:.6rem .85rem;text-align:center;background:var(--cream);border-bottom:1px solid var(--cream-border);}
-.sched-tbl th:first-child{text-align:left;}
-.sched-tbl td{padding:.62rem .85rem;border-bottom:1px solid var(--cream-dark);text-align:center;color:var(--brown-mid);}
-.sched-tbl td:first-child{text-align:left;font-weight:700;color:var(--brown);}
-.sched-tbl tr:last-child td{border-bottom:none;}
-.sched-tbl tr.cur-wk td{background:var(--sage-pale);}
-.sched-tbl tr.past-wk{opacity:.6;}
-.sched-tbl tr.past-wk td:first-child{opacity:1;}
-.sched-check{color:var(--sage);}
-.dn-note{font-size:.62rem;color:var(--brown-light);font-style:italic;}
-
-/* ── PACE GUIDE ── */
-.pace-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.75rem;}
-.pc{background:#fff;border:1px solid var(--cream-border);border-radius:8px;padding:1rem;text-align:center;box-shadow:var(--shadow);}
-.pc.hl{border-color:var(--sage-light);background:var(--sage-pale);}
-.pc-type{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brown-light);margin-bottom:.35rem;}
-.pc.hl .pc-type{color:var(--sage-dark);}
-.pc-range{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:600;color:var(--brown);line-height:1.1;}
-.pc.hl .pc-range{color:var(--sage-dark);}
-.pc-note{font-size:.7rem;color:var(--brown-light);margin-top:.3rem;line-height:1.4;}
-
-/* ── SHARE/EXPORT ── */
-.share-card{background:var(--cream-dark);border-radius:8px;padding:1.3rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.share-text{}
-.share-ttl{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;margin-bottom:.2rem;}
-.share-sub{font-size:.75rem;color:var(--brown-mid);line-height:1.5;}
-.share-btns{display:flex;gap:.5rem;flex-wrap:wrap;}
-.btn{padding:.55rem 1.2rem;border-radius:6px;font-family:'Lato',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s;}
-.btn-sage{background:var(--sage);color:#fff;}
-.btn-sage:hover{background:var(--sage-dark);}
-.btn-ghost{background:transparent;color:var(--brown-mid);border:1px solid var(--cream-border);}
-.btn-ghost:hover{background:var(--cream);}
-.btn-sm{padding:.38rem .9rem;font-size:.68rem;}
-
-/* ── MODAL ── */
-.modal-ov{display:none;position:fixed;inset:0;background:rgba(61,48,37,.52);z-index:200;align-items:center;justify-content:center;padding:1rem;}
-.modal-ov.open{display:flex;}
-.modal{background:#fff;border-radius:12px;width:100%;max-width:460px;box-shadow:0 20px 60px rgba(0,0,0,.22);overflow:hidden;}
-.modal-hdr{background:var(--sage);padding:1.2rem 1.5rem;color:#fff;}
-.modal-hdr-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;}
-.modal-hdr-sub{font-size:.78rem;opacity:.82;margin-top:.15rem;}
-.modal-body{padding:1.5rem;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.fg{margin-bottom:.9rem;}
-.fg label{display:block;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown-light);margin-bottom:.3rem;}
-.fg input,.fg select{width:100%;padding:.6rem .8rem;border:1px solid var(--cream-border);border-radius:6px;font-family:'Lato',sans-serif;font-size:.88rem;color:var(--brown);background:var(--cream);transition:border-color .2s;}
-.fg input:focus,.fg select:focus{outline:none;border-color:var(--sage);background:#fff;}
-.fg input::placeholder{color:var(--brown-light);}
-.modal-ftr{padding:.9rem 1.5rem;background:var(--cream);display:flex;gap:.65rem;justify-content:flex-end;}
-.calc-info{font-size:.72rem;color:var(--sage-dark);background:var(--sage-pale);border-radius:5px;padding:.5rem .8rem;margin-bottom:.9rem;}
-
-/* ── FOOTER ── */
-.site-footer{text-align:center;padding:2rem;font-size:.73rem;color:var(--brown-light);border-top:1px solid var(--cream-border);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:600px){
-  .header-title{font-size:2.6rem;}
-  .countdown{gap:1.2rem;}
-  .glance-grid{grid-template-columns:1fr 1fr;}
-  .runs-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .share-card{flex-direction:column;align-items:flex-start;}
-}
+  /* ---- Notes / instructions ---- */
+  .flag{background:#FBF1E6;border:1px solid #EAD7BF;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:13px;color:var(--soft-ink)}
+  .flag b{color:var(--ink)}
+  details.howto{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:22px 0}
+  details.howto summary{font-family:var(--serif);font-size:21px;font-weight:600;padding:13px 0;cursor:pointer;list-style:none}
+  details.howto summary::-webkit-details-marker{display:none}
+  details.howto summary::after{content:"＋";float:right;color:var(--clay)}
+  details.howto[open] summary::after{content:"－"}
+  .howto code{background:#F3ECDD;border-radius:5px;padding:1px 5px;font-size:12.5px;font-family:ui-monospace,Menlo,monospace}
+  .howto ol{margin:6px 0 16px 18px;font-size:13.5px;color:var(--soft-ink)}
+  .howto li{margin:7px 0}
+  footer{text-align:center;color:var(--soft-ink);font-size:12px;margin-top:30px}
+  footer .heart{color:var(--clay)}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Novant Health Charlotte Marathon</div>
+    <h1>The Long Road<br>to November</h1>
+    <div class="sub">Delaney's 28-week journey to 26.2</div>
+    <div class="rule"></div>
+    <div class="stats" id="stats"></div>
+    <div class="progwrap">
+      <div class="progmeta"><span id="progLabel">Progress</span><span id="progPct"></span></div>
+      <div class="progbar"><div class="progfill" id="progFill"></div></div>
+    </div>
+  </header>
 
-<!-- ═══ HEADER ═══ -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-eye">Marathon Training Journal</div>
-    <div class="header-title">Delaney's Marathon Journey</div>
-    <div class="header-sub">Novant Health Charlotte Marathon &nbsp;•&nbsp; November 14, 2026</div>
-    <div class="header-rule"><span>❧</span></div>
-    <div class="countdown">
-      <div class="cd-item"><span class="cd-num" id="cd-days">—</span><div class="cd-lbl">Days</div></div>
-      <div class="cd-sep">·</div>
-      <div class="cd-item"><span class="cd-num" id="cd-weeks">—</span><div class="cd-lbl">Weeks</div></div>
-      <div class="cd-sep">·</div>
-      <div class="cd-item"><span class="cd-num" id="cd-phase">—</span><div class="cd-lbl">Phase</div></div>
-    </div>
-    <div class="header-badge" id="hdr-badge">Week — · — Phase</div>
-  </div>
-</header>
-
-<!-- ═══ MAIN ═══ -->
-<main class="main">
-
-  <!-- AT A GLANCE -->
-  <div class="glance-grid" style="margin-top:.5rem;">
-    <div class="gc sand">
-      <div class="gc-lbl">Goal Pace</div>
-      <div class="gc-num">11:27</div>
-      <div class="gc-sub">per mile · sub-5:00:00</div>
-    </div>
-    <div class="gc">
-      <div class="gc-lbl">Miles Logged</div>
-      <div class="gc-num" id="miles-logged">—</div>
-      <div class="gc-sub" id="miles-sub">of 474.2 total plan miles</div>
-    </div>
-    <div class="gc">
-      <div class="gc-lbl">Weeks Complete</div>
-      <div class="gc-num" id="weeks-done">—</div>
-      <div class="gc-sub">of 28 weeks</div>
-    </div>
+  <div class="callout">
+    <h3>The one cue that matters right now</h3>
+    <p>Easy days should feel <b>almost too slow</b> — conversational, Zone 2, heart rate <b>130–140 bpm</b>. The aerobic engine is built by going slow, not fast. If HR climbs past the mid-140s, ease off or walk a few steps. Watch heart rate, not pace.</p>
   </div>
 
-  <!-- PROGRESS BAR -->
-  <div class="prog-card" style="margin-top:1rem;">
-    <div class="prog-top">
-      <div class="prog-label">Overall Journey Progress</div>
-      <div class="prog-nums" id="prog-pct">0%</div>
-    </div>
-    <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
-    <div class="prog-phases">
-      <span class="pp base">Base &nbsp;Wks 1–8</span>
-      <span class="pp dev">Development &nbsp;Wks 9–16</span>
-      <span class="pp peak">Peak &nbsp;Wks 17–23</span>
-      <span class="pp taper">Taper &nbsp;Wks 24–28</span>
-    </div>
+  <div class="filters" id="filters">
+    <button class="filt all" data-f="all" data-on="1">All</button>
+    <button class="filt base" data-f="Base" data-on="1">Base</button>
+    <button class="filt dev" data-f="Development" data-on="1">Development</button>
+    <button class="filt peak" data-f="Peak" data-on="1">Peak</button>
+    <button class="filt taper" data-f="Taper" data-on="1">Taper</button>
   </div>
 
-  <!-- COACHING ALERT -->
-  <div class="alert-card" style="margin-top:1rem;">
-    <div class="alert-title">⚠ Coaching Note — Your #1 Focus Right Now</div>
-    <div class="alert-body">
-      Your Garmin shows <strong>10:27–11:04/mi at HR 154–165 bpm (Zone 4)</strong> on easy days.
-      Easy runs should be <strong>11:30–12:30/mi at ~130–140 bpm (Zone 2)</strong> — genuinely conversational.
-      Slow down until you can speak in full sentences. If HR climbs above ~145, walk until it drops.
-      <br><br>The correct response to fast easy-run data is to reinforce slowing down — not to raise the targets.
-    </div>
+  <section class="weeks" id="weeks"></section>
+
+  <div class="panel">
+    <h2>Pace Guide</h2>
+    <div class="lede">Governed by heart rate first, pace second.</div>
+    <div class="pace"><div class="t">Easy<span>Conversational · HR Zone 2 (~130–140)</span></div><div class="v">11:30–12:30</div></div>
+    <div class="pace"><div class="t">Long<span>Slightly slower than easy · aerobic</span></div><div class="v">12:00–12:30</div></div>
+    <div class="pace"><div class="t">Tempo<span>“Comfortably hard” · later phases</span></div><div class="v">10:30–11:00</div></div>
+    <div class="pace"><div class="t">Race pace<span>The sub-5:00 goal · practiced in Peak</span></div><div class="v">~11:27</div></div>
   </div>
 
-  <!-- CURRENT WEEK -->
-  <div class="section-head">
-    <div class="section-title">This Week</div>
-    <div class="section-rule"></div>
-  </div>
-  <div class="week-hdr">
-    <div class="week-hdr-title" id="cw-title">Week —</div>
-    <span class="badge" id="cw-badge">—</span>
-    <span style="font-size:.8rem;color:var(--brown-light);" id="cw-dates"></span>
-    <span style="font-size:.8rem;color:var(--brown-mid);margin-left:auto;" id="cw-total"></span>
-  </div>
-  <div class="runs-grid" id="runs-grid"></div>
-
-  <!-- TRAINING LOG -->
-  <div class="section-head">
-    <div class="section-title">Training Log</div>
-    <div class="section-rule"></div>
-  </div>
-  <div class="tbl-wrap">
-    <table class="log-tbl">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Date</th>
-          <th>Day</th>
-          <th>Planned</th>
-          <th>Actual</th>
-          <th>Time</th>
-          <th>Pace</th>
-          <th>Avg HR</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="log-tbody"></tbody>
-    </table>
+  <div class="flag">
+    <b>Two numbers to confirm against your records:</b> Week&nbsp;5 Friday is shown as <b>5&nbsp;mi</b> per the original plan table (a June note had it as 4). And peak load reads <b>33&nbsp;mi</b> at Week&nbsp;23 in this per-run breakdown, while your design notes reference a 36-mile peak. The training logic is unchanged either way — just verify these two cells.
   </div>
 
-  <!-- 28-WEEK SCHEDULE -->
-  <div class="section-head">
-    <div class="section-title">28-Week Schedule</div>
-    <div class="section-rule"></div>
-  </div>
-  <div id="schedule-phases"></div>
+  <details class="howto">
+    <summary>How to update this tracker</summary>
+    <ol>
+      <li>Open <code>index.html</code> in any text editor and scroll to the line that says <code>const PLAN = [</code>.</li>
+      <li>Find the week you ran, then the day (<code>Mon</code>, <code>Wed</code>, <code>Fri</code>, or <code>Sat</code>).</li>
+      <li>Add an <code>actual</code> entry like this:<br><code>{d:'Fri', plan:5, actual:{dist:5.02, time:'53:40', pace:'10:41', hr:152, loc:'Forest Acres', temp:60}}</code></li>
+      <li>Save the file. The checkmark, miles, and progress bar update automatically.</li>
+      <li>To publish: in your GitHub repo choose <b>Add file → Upload files</b>, drag in the new <code>index.html</code>, and commit. The live site refreshes in a couple of minutes.</li>
+    </ol>
+  </details>
 
-  <!-- PACE GUIDE -->
-  <div class="section-head">
-    <div class="section-title">Pace Reference</div>
-    <div class="section-rule"></div>
-  </div>
-  <div class="pace-grid">
-    <div class="pc hl">
-      <div class="pc-type">Easy</div>
-      <div class="pc-range">11:30–12:30</div>
-      <div class="pc-note">Zone 2 · 130–140 bpm<br>Should feel almost too slow</div>
-    </div>
-    <div class="pc hl">
-      <div class="pc-type">Long Run</div>
-      <div class="pc-range">12:00–12:30</div>
-      <div class="pc-note">Slightly slower than easy<br>Aerobic & controlled</div>
-    </div>
-    <div class="pc">
-      <div class="pc-type">Tempo</div>
-      <div class="pc-range">10:30–11:00</div>
-      <div class="pc-note">Comfortably hard<br>Introduced later in plan</div>
-    </div>
-    <div class="pc">
-      <div class="pc-type">Race Pace</div>
-      <div class="pc-range">~11:27</div>
-      <div class="pc-note">Sub-5:00:00 goal<br>Practiced in Peak phase</div>
-    </div>
-  </div>
-
-  <!-- SHARE WITH CLAUDE -->
-  <div class="section-head">
-    <div class="section-title">Share Progress</div>
-    <div class="section-rule"></div>
-  </div>
-  <div class="share-card">
-    <div class="share-text">
-      <div class="share-ttl">Upload Garmin Screenshots to Claude</div>
-      <div class="share-sub">After each run, upload your Garmin screenshot in a new Claude chat.<br>
-      Export your log below and paste it alongside the screenshot so Claude can update your tracker.</div>
-    </div>
-    <div class="share-btns">
-      <button class="btn btn-sage btn-sm" onclick="exportData()">Export Log</button>
-      <button class="btn btn-ghost btn-sm" onclick="document.getElementById('import-area').style.display=document.getElementById('import-area').style.display==='none'?'block':'none'">Import Data</button>
-    </div>
-  </div>
-  <div id="import-area" style="display:none;margin-top:.75rem;">
-    <textarea id="import-json" rows="4" style="width:100%;padding:.75rem;border:1px solid var(--cream-border);border-radius:6px;font-size:.8rem;font-family:monospace;background:#fff;resize:vertical;" placeholder="Paste exported JSON here…"></textarea>
-    <button class="btn btn-sage btn-sm" style="margin-top:.5rem;" onclick="importData()">Load Data</button>
-  </div>
-
-</main>
-
-<!-- ═══ FOOTER ═══ -->
-<footer class="site-footer">
-  ❧ &nbsp; Charlotte Marathon · November 14, 2026 &nbsp; · &nbsp; Sub-5:00:00 &nbsp; ❧
-</footer>
-
-<!-- ═══ LOG MODAL ═══ -->
-<div class="modal-ov" id="modal-ov" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <div class="modal-hdr">
-      <div class="modal-hdr-title" id="modal-title">Log Run</div>
-      <div class="modal-hdr-sub" id="modal-sub">Enter your Garmin data</div>
-    </div>
-    <div class="modal-body">
-      <div class="calc-info" id="modal-target">Target: — mi &nbsp;|&nbsp; Easy pace 11:30–12:30/mi &nbsp;|&nbsp; HR ~130–140 bpm</div>
-      <div class="form-row">
-        <div class="fg">
-          <label>Actual Distance (mi)</label>
-          <input type="number" step="0.01" id="f-dist" placeholder="e.g. 3.05">
-        </div>
-        <div class="fg">
-          <label>Time (hh:mm:ss)</label>
-          <input type="text" id="f-time" placeholder="e.g. 31:49">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="fg">
-          <label>Avg Heart Rate (bpm)</label>
-          <input type="number" id="f-hr" placeholder="e.g. 154">
-        </div>
-        <div class="fg">
-          <label>Location</label>
-          <input type="text" id="f-loc" placeholder="e.g. Forest Acres">
-        </div>
-      </div>
-      <div class="fg">
-        <label>Conditions / Notes</label>
-        <input type="text" id="f-notes" placeholder="e.g. 82°F, humid">
-      </div>
-      <div id="modal-pace-preview" style="font-size:.78rem;color:var(--brown-mid);min-height:1.2em;"></div>
-    </div>
-    <div class="modal-ftr">
-      <button class="btn btn-ghost btn-sm" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-sage btn-sm" onclick="saveRun()">Save Run</button>
-    </div>
-  </div>
+  <footer>
+    Built with <span class="heart">&#10084;</span> for the road ahead · Race day: Saturday, Nov&nbsp;14, 2026
+  </footer>
 </div>
 
 <script>
-// ═══════════════════════════════
-// DATA
-// ═══════════════════════════════
-const PLAN_START = new Date('2026-05-04T00:00:00');
-const RACE_DATE  = new Date('2026-11-14T00:00:00');
-const TOTAL_MILES = 474.2;
-
-const SCHEDULE = [
-  {week:1,  phase:'Base',        mon:2,   wed:3,   fri:3,    sat:null, total:8,    note:''},
-  {week:2,  phase:'Base',        mon:2,   wed:3,   fri:3,    sat:null, total:8,    note:''},
-  {week:3,  phase:'Base',        mon:2,   wed:3.5, fri:4,    sat:null, total:9.5,  note:''},
-  {week:4,  phase:'Base',        mon:2,   wed:3.5, fri:4,    sat:null, total:9.5,  note:''},
-  {week:5,  phase:'Base',        mon:3,   wed:4,   fri:5,    sat:null, total:12,   note:''},
-  {week:6,  phase:'Base',        mon:3,   wed:4,   fri:5,    sat:null, total:12,   note:''},
-  {week:7,  phase:'Base',        mon:3,   wed:4,   fri:6,    sat:null, total:13,   note:''},
-  {week:8,  phase:'Base',        mon:2,   wed:3,   fri:3,    sat:null, total:8,    note:'down week'},
-  {week:9,  phase:'Development', mon:3,   wed:4,   fri:7,    sat:null, total:14,   note:''},
-  {week:10, phase:'Development', mon:3,   wed:4,   fri:7,    sat:null, total:14,   note:''},
-  {week:11, phase:'Development', mon:3,   wed:5,   fri:8,    sat:null, total:16,   note:''},
-  {week:12, phase:'Development', mon:3,   wed:5,   fri:8,    sat:null, total:16,   note:''},
-  {week:13, phase:'Development', mon:3,   wed:4,   fri:5,    sat:4,    total:16,   note:'Saturday run begins'},
-  {week:14, phase:'Development', mon:3,   wed:4,   fri:10,   sat:4,    total:21,   note:''},
-  {week:15, phase:'Development', mon:3,   wed:5,   fri:11,   sat:4,    total:23,   note:''},
-  {week:16, phase:'Development', mon:2,   wed:3,   fri:4,    sat:null, total:9,    note:'down week'},
-  {week:17, phase:'Peak',        mon:3,   wed:5,   fri:12,   sat:5,    total:25,   note:''},
-  {week:18, phase:'Peak',        mon:3,   wed:5,   fri:13,   sat:5,    total:26,   note:''},
-  {week:19, phase:'Peak',        mon:3,   wed:5,   fri:14,   sat:5,    total:27,   note:''},
-  {week:20, phase:'Peak',        mon:3,   wed:5,   fri:15,   sat:5,    total:28,   note:''},
-  {week:21, phase:'Peak',        mon:3,   wed:5,   fri:16,   sat:5,    total:29,   note:''},
-  {week:22, phase:'Peak',        mon:3,   wed:5,   fri:18,   sat:5,    total:31,   note:''},
-  {week:23, phase:'Peak',        mon:3,   wed:5,   fri:20,   sat:5,    total:33,   note:'longest long run'},
-  {week:24, phase:'Taper',       mon:3,   wed:4,   fri:12,   sat:null, total:19,   note:''},
-  {week:25, phase:'Taper',       mon:3,   wed:4,   fri:10,   sat:null, total:17,   note:''},
-  {week:26, phase:'Taper',       mon:2,   wed:3,   fri:8,    sat:null, total:13,   note:''},
-  {week:27, phase:'Taper',       mon:2,   wed:3,   fri:6,    sat:null, total:11,   note:''},
-  {week:28, phase:'Taper',       mon:2,   wed:2,   fri:2.2,  sat:null, total:6.2,  note:'race week — marathon Sat Nov 14'},
+/* ============================================================
+   PLAN DATA  —  edit here to log runs (see "How to update")
+   Planned distances in miles. Add an `actual:{...}` to log a run.
+   ============================================================ */
+const PLAN = [
+ {n:1, phase:'Base', start:'2026-05-04', days:[
+   {d:'Mon', plan:2,   actual:{dist:2.00,time:'22:09',pace:'11:04',hr:154,loc:'Forest Acres',temp:88}},
+   {d:'Wed', plan:3,   actual:{dist:3.05,time:'31:49',pace:'10:27',hr:159,loc:'Forest Acres',temp:84,note:'intervals'}},
+   {d:'Fri', plan:3,   actual:{dist:3.13,time:'33:15',pace:'10:37',hr:165,loc:'Forest Acres',temp:88}},
+ ]},
+ {n:2, phase:'Base', start:'2026-05-11', days:[
+   {d:'Mon', plan:2,   actual:{dist:2.00,time:'21:18',pace:'10:37',hr:154,loc:'Arcadia Lakes',temp:97}},
+   {d:'Wed', plan:3,   actual:{dist:3.41,time:'38:00',pace:'11:09',hr:162,loc:'Forest Acres',temp:79}},
+   {d:'Fri', plan:3,   actual:{dist:3.51,time:'39:01',pace:'11:07',hr:156,loc:'Columbia',temp:95}},
+ ]},
+ {n:3, phase:'Base', start:'2026-05-18', days:[
+   {d:'Mon', plan:2,   actual:{dist:2.01,time:'22:12',pace:'11:04',hr:149,loc:'Forest Acres',temp:86,note:'lowest HR'}},
+   {d:'Wed', plan:3.5, actual:{dist:3.51,time:'36:30',pace:'10:25',hr:161,loc:'Forest Acres',temp:82}},
+   {d:'Fri', plan:4,   actual:{dist:4.01,time:'43:04',pace:'10:45',hr:155,loc:'Arcadia Lakes',temp:84}},
+ ]},
+ {n:4, phase:'Base', start:'2026-05-25', days:[
+   {d:'Mon', plan:2,   actual:{dist:2.00,time:'21:51',pace:'10:54',hr:151,loc:'Forest Acres',temp:86,note:'Memorial Day'}},
+   {d:'Wed', plan:3.5, actual:{dist:3.51,time:'38:12',pace:'10:53',hr:160,loc:'Forest Acres',temp:84}},
+   {d:'Fri', plan:4,   actual:{dist:4.01,time:'43:27',pace:'10:51',hr:165,loc:'Columbia',temp:88}},
+ ]},
+ {n:5, phase:'Base', start:'2026-06-01', days:[
+   {d:'Mon', plan:3,   actual:{dist:3.07,time:'33:17',pace:'10:50',hr:155,loc:'Arcadia Lakes',temp:84,note:'done Tue 6/2'}},
+   {d:'Wed', plan:4,   actual:{dist:4.45,time:'45:07',pace:'10:09',hr:158,loc:'Forest Acres',temp:55,note:'done Thu 6/4 · cool'}},
+   {d:'Fri', plan:5},
+ ]},
+ {n:6, phase:'Base', start:'2026-06-08', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:5}]},
+ {n:7, phase:'Base', start:'2026-06-15', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:6}]},
+ {n:8, phase:'Base', start:'2026-06-22', down:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:3}]},
+ {n:9, phase:'Development', start:'2026-06-29', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
+ {n:10, phase:'Development', start:'2026-07-06', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
+ {n:11, phase:'Development', start:'2026-07-13', days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:8}]},
+ {n:12, phase:'Development', start:'2026-07-20', days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:8}]},
+ {n:13, phase:'Development', start:'2026-07-27', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:5},{d:'Sat',plan:4}]},
+ {n:14, phase:'Development', start:'2026-08-03', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:10},{d:'Sat',plan:4}]},
+ {n:15, phase:'Development', start:'2026-08-10', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:11},{d:'Sat',plan:4}]},
+ {n:16, phase:'Development', start:'2026-08-17', down:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:4}]},
+ {n:17, phase:'Peak', start:'2026-08-24', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:12},{d:'Sat',plan:5}]},
+ {n:18, phase:'Peak', start:'2026-08-31', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:13},{d:'Sat',plan:5}]},
+ {n:19, phase:'Peak', start:'2026-09-07', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:14},{d:'Sat',plan:5}]},
+ {n:20, phase:'Peak', start:'2026-09-14', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:15},{d:'Sat',plan:5}]},
+ {n:21, phase:'Peak', start:'2026-09-21', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:16},{d:'Sat',plan:5}]},
+ {n:22, phase:'Peak', start:'2026-09-28', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:18},{d:'Sat',plan:5}]},
+ {n:23, phase:'Peak', start:'2026-10-05', sat:true, longest:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:20},{d:'Sat',plan:5}]},
+ {n:24, phase:'Taper', start:'2026-10-12', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:12}]},
+ {n:25, phase:'Taper', start:'2026-10-19', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:10}]},
+ {n:26, phase:'Taper', start:'2026-10-26', days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:8}]},
+ {n:27, phase:'Taper', start:'2026-11-02', days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:6}]},
+ {n:28, phase:'Taper', start:'2026-11-09', race:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:2},{d:'Fri',plan:2.2}]},
 ];
 
-// Pre-loaded completed runs. Key = "w{week}-{day}"
-const INITIAL_LOG = {
-  'w1-mon': {distance:2.00, time:'22:09', pace:'11:04', hr:154, location:'Forest Acres',   date:'2026-05-04', notes:''},
-  'w1-wed': {distance:3.05, time:'31:49', pace:'10:27', hr:159, location:'Forest Acres',   date:'2026-05-06', notes:''},
-  'w1-fri': {distance:3.13, time:'33:15', pace:'10:37', hr:165, location:'Forest Acres',   date:'2026-05-08', notes:''},
-  'w2-mon': {distance:2.00, time:'21:18', pace:'10:37', hr:154, location:'Arcadia Lakes',  date:'2026-05-11', notes:'81°F'},
-  'w2-wed': {distance:3.41, time:'38:00', pace:'11:09', hr:162, location:'Forest Acres',   date:'2026-05-13', notes:''},
-  'w2-fri': {distance:3.51, time:'39:01', pace:'11:07', hr:156, location:'Columbia Running',date:'2026-05-15', notes:''},
-};
+const PHASE_COLOR={Base:'var(--sage)',Development:'var(--gold)',Peak:'var(--clay)',Taper:'var(--taper)'};
+const RACE=new Date('2026-11-14T07:00:00');
+const START=new Date('2026-05-04T00:00:00');
+const MS_DAY=86400000;
+const now=new Date();
 
-function getLog() {
-  const s = localStorage.getItem('delaney-log-v2');
-  const stored = s ? JSON.parse(s) : {};
-  // INITIAL_LOG is the baseline; user-saved entries override it
-  return Object.assign({}, INITIAL_LOG, stored);
-}
-function saveLog(log) {
-  localStorage.setItem('delaney-log-v2', JSON.stringify(log));
-}
+/* current week (1..28) */
+let curWeek=Math.floor((now-START)/MS_DAY/7)+1;
+if(curWeek<1)curWeek=1; if(curWeek>28)curWeek=28;
 
-// ═══════════════════════════════
-// UTILS
-// ═══════════════════════════════
-function today() {
-  const d = new Date();
-  d.setHours(0,0,0,0);
-  return d;
-}
-function diffDays(a, b) {
-  return Math.floor((b - a) / 86400000);
-}
-function currentWeekNum() {
-  const d = diffDays(PLAN_START, today());
-  if (d < 0) return 1;
-  return Math.min(Math.floor(d / 7) + 1, 28);
-}
-function weekStartDate(weekNum) {
-  const d = new Date(PLAN_START);
-  d.setDate(d.getDate() + (weekNum - 1) * 7);
-  return d;
-}
-function runDate(weekNum, dayOffset) {
-  const d = weekStartDate(weekNum);
-  d.setDate(d.getDate() + dayOffset);
-  return d;
-}
-// dayOffset: Mon=0, Wed=2, Fri=4, Sat=5
-const DAY_OFFSETS = {mon:0, wed:2, fri:4, sat:5};
-const DAY_LABELS  = {mon:'Monday', wed:'Wednesday', fri:'Friday', sat:'Saturday'};
-const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-function fmtDate(d) {
-  return MONTHS[d.getMonth()] + ' ' + d.getDate();
-}
-function paceToSecs(paceStr) {
-  // "10:27" → 627
-  const parts = paceStr.split(':');
-  if (parts.length === 2) return parseInt(parts[0])*60 + parseInt(parts[1]);
-  return 0;
-}
-function calcPace(dist, timeStr) {
-  // timeStr could be mm:ss or hh:mm:ss
-  const parts = timeStr.split(':').map(Number);
-  let totalSecs = 0;
-  if (parts.length === 3) totalSecs = parts[0]*3600 + parts[1]*60 + parts[2];
-  else if (parts.length === 2) totalSecs = parts[0]*60 + parts[1];
-  if (!dist || !totalSecs) return '';
-  const secPerMile = totalSecs / parseFloat(dist);
-  const m = Math.floor(secPerMile / 60);
-  const s = Math.round(secPerMile % 60);
-  return m + ':' + String(s).padStart(2,'0');
-}
-function isFastEasy(paceStr) {
-  // Flag if pace < 11:30 (690 secs)
-  return paceStr && paceToSecs(paceStr) < 690;
-}
-function isHighHR(hr) {
-  return hr && parseInt(hr) > 145;
-}
-function hrZoneClass(hr) {
-  const h = parseInt(hr);
-  if (h <= 140) return 'z2';
-  if (h <= 153) return 'z3';
-  return 'z4';
-}
-function totalLogged(log) {
-  return Object.values(log).reduce((s,r) => s + (parseFloat(r.distance)||0), 0);
+/* ---- derive stats ---- */
+let totalRuns=0,doneRuns=0,doneMiles=0,planMiles=0;
+PLAN.forEach(w=>w.days.forEach(d=>{
+  totalRuns++; planMiles+=d.plan;
+  if(d.actual){doneRuns++; doneMiles+=d.actual.dist;}
+}));
+const daysToRace=Math.max(0,Math.ceil((RACE-now)/MS_DAY));
+
+const fmtDate=s=>{const dt=new Date(s+'T00:00:00');return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});};
+const weekEnd=s=>{const dt=new Date(s+'T00:00:00');dt.setDate(dt.getDate()+6);return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});};
+
+/* ---- render stat band ---- */
+document.getElementById('stats').innerHTML=[
+  ['Week',curWeek+' / 28'],
+  ['Runs logged',doneRuns],
+  ['Miles banked',doneMiles.toFixed(1)],
+  ['Days to race',daysToRace],
+].map(([l,n])=>`<div class="stat"><div class="num">${n}</div><div class="lbl">${l}</div></div>`).join('');
+
+/* ---- progress bar (by completed runs) ---- */
+const pct=Math.round(doneRuns/totalRuns*100);
+document.getElementById('progLabel').textContent=`${doneRuns} of ${totalRuns} runs · ${doneMiles.toFixed(1)} of ${planMiles.toFixed(0)} mi`;
+document.getElementById('progPct').textContent=pct+'%';
+setTimeout(()=>document.getElementById('progFill').style.width=pct+'%',180);
+
+/* ---- render weeks ---- */
+function weekDoneMiles(w){return w.days.reduce((s,d)=>s+(d.actual?d.actual.dist:0),0);}
+function weekPlanMiles(w){return w.days.reduce((s,d)=>s+d.plan,0);}
+
+function dayRow(d){
+  if(d.actual){
+    const a=d.actual;
+    const tClass=a.temp>=85?'hot':(a.temp&&a.temp<=60?'cool':'');
+    const tempStr=a.temp?` · <span class="${tClass}">${a.temp}&deg;</span>`:'';
+    const noteStr=a.note?` <span class="note">${a.note}</span>`:'';
+    return `<div class="day done">
+      <div class="check">&#10003;</div>
+      <div class="dname">${d.d}</div>
+      <div class="dbody">
+        <div class="dactual"><span class="mi">${a.dist.toFixed(2)}</span> mi &middot; ${a.pace}/mi &middot; ${a.hr} bpm</div>
+        <div class="dmeta">${a.loc} &middot; ${a.time}${tempStr}${noteStr}</div>
+      </div></div>`;
+  }
+  return `<div class="day pending">
+    <div class="check"></div>
+    <div class="dname">${d.d}</div>
+    <div class="dbody"><div class="dplan"><b>${d.plan}</b> mi planned</div></div>
+  </div>`;
 }
 
-// ═══════════════════════════════
-// HEADER & GLANCE
-// ═══════════════════════════════
-function renderHeader() {
-  const now = today();
-  const daysLeft = diffDays(now, RACE_DATE);
-  const weeksLeft = Math.ceil(daysLeft / 7);
-  const wn = currentWeekNum();
-  const phase = SCHEDULE[wn-1].phase;
-
-  document.getElementById('cd-days').textContent  = Math.max(0, daysLeft);
-  document.getElementById('cd-weeks').textContent = Math.max(0, weeksLeft);
-  document.getElementById('cd-phase').textContent = phase;
-  document.getElementById('hdr-badge').textContent = 'Week ' + wn + '  ·  ' + phase + ' Phase';
+function weekCard(w){
+  const accent=PHASE_COLOR[w.phase];
+  const done=weekDoneMiles(w), planm=weekPlanMiles(w);
+  const isNow=w.n===curWeek;
+  const tags=[];
+  if(w.down)tags.push('<span class="downtag">down week</span>');
+  if(w.longest)tags.push('<span class="downtag">longest run</span>');
+  if(w.race)tags.push('<span class="downtag">race week</span>');
+  const milesStr=done>0?`<b>${done.toFixed(1)}</b> / ${planm} mi`:`${planm} mi planned`;
+  return `<div class="week ${isNow?'now':''}" data-phase="${w.phase}" style="--accent:${accent}">
+    <div class="whead">
+      <div class="wleft">
+        <span class="wnum">Week ${w.n}</span>
+        <span class="wdates">${fmtDate(w.start)} – ${weekEnd(w.start)}</span>
+        ${isNow?'<span class="nowtag">This week</span>':''}
+        <span class="wtag">${w.phase}</span>
+        ${tags.join(' ')}
+      </div>
+      <div class="wmiles">${milesStr}</div>
+    </div>
+    <div class="days">${w.days.map(dayRow).join('')}</div>
+  </div>`;
 }
 
-function renderGlance() {
-  const log = getLog();
-  const logged = totalLogged(log);
-  const pct = Math.min(100, (logged / TOTAL_MILES) * 100);
-  const wn = currentWeekNum();
-  // weeks with at least one run logged
-  const completedWeeks = Math.max(0, wn - 1);
-
-  document.getElementById('miles-logged').textContent = logged.toFixed(1);
-  document.getElementById('weeks-done').textContent = completedWeeks;
-  document.getElementById('prog-pct').textContent = pct.toFixed(1) + '%';
-  document.getElementById('prog-fill').style.width = pct + '%';
+const weeksEl=document.getElementById('weeks');
+function render(filter){
+  weeksEl.innerHTML=PLAN.filter(w=>filter==='all'||w.phase===filter).map(weekCard).join('');
 }
+render('all');
 
-// ═══════════════════════════════
-// CURRENT WEEK
-// ═══════════════════════════════
-function renderCurrentWeek() {
-  const wn = currentWeekNum();
-  const sched = SCHEDULE[wn - 1];
-  const log = getLog();
-  const wStart = weekStartDate(wn);
-  const wEnd = new Date(wStart); wEnd.setDate(wEnd.getDate() + 6);
-  const now = today();
+/* scroll current week into view on load */
+window.addEventListener('load',()=>{
+  const nowCard=document.querySelector('.week.now');
+  if(nowCard)nowCard.scrollIntoView({behavior:'smooth',block:'center'});
+});
 
-  document.getElementById('cw-title').textContent = 'Week ' + wn + ' of 28';
-  document.getElementById('cw-badge').textContent = sched.phase + ' Phase';
-  document.getElementById('cw-badge').className = 'badge badge-' + sched.phase.toLowerCase().replace(' ','');
-  document.getElementById('cw-dates').textContent = fmtDate(wStart) + ' – ' + fmtDate(wEnd);
-  document.getElementById('cw-total').textContent = 'Planned total: ' + sched.total + ' mi';
-
-  const days = ['mon','wed','fri'];
-  if (sched.sat) days.push('sat');
-
-  const grid = document.getElementById('runs-grid');
-  grid.innerHTML = '';
-
-  days.forEach(d => {
-    const planned = sched[d];
-    if (!planned) return;
-    const offset = DAY_OFFSETS[d];
-    const runD = runDate(wn, offset);
-    const key = 'w' + wn + '-' + d;
-    const entry = log[key];
-    const isPast = now > runD;
-    const isToday = diffDays(runD, now) === 0;
-
-    let cardClass = 'run-card';
-    if (entry) cardClass += ' done';
-    else if (isToday) cardClass += ' today-run';
-    else cardClass += ' unlocked';
-
-    let statusTxt = entry ? 'Complete ✓' : (isToday ? 'Today' : (isPast ? 'Not logged' : 'Upcoming'));
-
-    let bodyHTML = '';
-    if (entry) {
-      const fastFlag = isFastEasy(entry.pace) ? '<span class="flag-fast">fast</span>' : '';
-      const hrFlag   = isHighHR(entry.hr)     ? '<span class="flag-hr">Z4</span>'    : '';
-      bodyHTML = `
-        <div class="rc-row"><span class="rc-lbl">Distance</span><span class="rc-val">${entry.distance} mi</span></div>
-        <div class="rc-row"><span class="rc-lbl">Time</span><span class="rc-val">${entry.time}</span></div>
-        <div class="rc-row"><span class="rc-lbl">Pace</span><span class="rc-val">${entry.pace}/mi${fastFlag}</span></div>
-        <div class="rc-row"><span class="rc-lbl">Avg HR</span><span class="rc-val">${entry.hr} bpm${hrFlag}</span></div>
-        ${entry.location ? `<div class="rc-row"><span class="rc-lbl">Location</span><span class="rc-val">${entry.location}</span></div>` : ''}
-      `;
-    }
-
-    grid.innerHTML += `
-      <div class="${cardClass}" onclick="openModal(${wn},'${d}')">
-        <div class="rc-top">
-          <div class="rc-day">${DAY_LABELS[d]} · ${fmtDate(runD)}</div>
-          <div class="rc-planned">${planned}<span class="rc-unit"> mi planned</span></div>
-          <div class="rc-status"><div class="rc-dot"></div><span class="rc-status-txt">${statusTxt}</span></div>
-        </div>
-        <div class="rc-body">
-          ${bodyHTML}
-          <button class="log-btn">${entry ? 'Edit Run' : 'Log This Run'}</button>
-        </div>
-      </div>`;
+/* ---- filters ---- */
+let active='all';
+document.querySelectorAll('.filt').forEach(b=>{
+  b.addEventListener('click',()=>{
+    active=b.dataset.f;
+    document.querySelectorAll('.filt').forEach(x=>x.dataset.on=(x.dataset.f===active)?'1':'0');
+    render(active);
   });
-}
-
-// ═══════════════════════════════
-// TRAINING LOG TABLE
-// ═══════════════════════════════
-function renderLog() {
-  const log = getLog();
-  const tbody = document.getElementById('log-tbody');
-  tbody.innerHTML = '';
-
-  // Collect all entries sorted by date
-  const entries = [];
-  for (const [key, val] of Object.entries(log)) {
-    const m = key.match(/^w(\d+)-(\w+)$/);
-    if (!m) continue;
-    const wn = parseInt(m[1]);
-    const day = m[2];
-    const offset = DAY_OFFSETS[day];
-    if (offset === undefined) continue;
-    const sched = SCHEDULE[wn - 1];
-    const planned = sched ? sched[day] : '—';
-    entries.push({wn, day, offset, planned, ...val, key});
-  }
-  entries.sort((a,b) => a.wn - b.wn || a.offset - b.offset);
-
-  if (entries.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--brown-light);padding:2rem;">No runs logged yet. Click a run card above to get started.</td></tr>';
-    return;
-  }
-
-  entries.forEach(e => {
-    const fastFlag = isFastEasy(e.pace) ? '<span class="flag-fast">fast</span>' : '';
-    const hrFlag   = isHighHR(e.hr)     ? '<span class="flag-hr">Z4</span>'    : '';
-    const hrClass  = hrZoneClass(e.hr);
-    const paceClass = isFastEasy(e.pace) ? 'z4' : 'z2';
-
-    tbody.innerHTML += `
-      <tr>
-        <td><span class="wk-tag">Wk ${e.wn}</span></td>
-        <td>${e.date || '—'}</td>
-        <td>${DAY_LABELS[e.day]}</td>
-        <td>${e.planned || '—'} mi</td>
-        <td>${e.distance} mi</td>
-        <td>${e.time}</td>
-        <td class="${paceClass}">${e.pace}/mi${fastFlag}</td>
-        <td class="${hrClass}">${e.hr} bpm${hrFlag}</td>
-        <td><button class="btn btn-ghost btn-sm" onclick="openModal(${e.wn},'${e.day}')">Edit</button></td>
-      </tr>`;
-  });
-}
-
-// ═══════════════════════════════
-// 28-WEEK SCHEDULE
-// ═══════════════════════════════
-function renderSchedule() {
-  const log = getLog();
-  const wn = currentWeekNum();
-  const phases = ['Base','Development','Peak','Taper'];
-  const phaseWeeks = {
-    Base: SCHEDULE.filter(s=>s.phase==='Base'),
-    Development: SCHEDULE.filter(s=>s.phase==='Development'),
-    Peak: SCHEDULE.filter(s=>s.phase==='Peak'),
-    Taper: SCHEDULE.filter(s=>s.phase==='Taper'),
-  };
-  const phaseRange = {
-    Base:'Weeks 1–8', Development:'Weeks 9–16', Peak:'Weeks 17–23', Taper:'Weeks 24–28'
-  };
-  const currentPhase = SCHEDULE[wn-1].phase;
-  const container = document.getElementById('schedule-phases');
-  container.innerHTML = '';
-
-  phases.forEach(phase => {
-    const weeks = phaseWeeks[phase];
-    const isCurrentPhase = phase === currentPhase;
-    const openClass = isCurrentPhase ? ' open' : '';
-
-    let rows = '';
-    weeks.forEach(s => {
-      const isCurrent = s.week === wn;
-      const isPast    = s.week < wn;
-      let rowClass = isCurrent ? 'cur-wk' : (isPast ? 'past-wk' : '');
-
-      // check if week is complete (all runs logged)
-      const days = ['mon','wed','fri'];
-      if (s.sat) days.push('sat');
-      const allDone = days.every(d => log['w'+s.week+'-'+d]);
-      const anyDone = days.some(d => log['w'+s.week+'-'+d]);
-
-      const cell = (d) => {
-        if (!s[d]) return '<td>—</td>';
-        const done = log['w'+s.week+'-'+d];
-        return `<td>${s[d]}${done ? ' <span class="sched-check">✓</span>' : ''}</td>`;
-      };
-
-      const wkLabel = isCurrent ? '→ Wk '+s.week : 'Wk '+s.week;
-      const noteSpan = s.note ? `<span class="dn-note"> · ${s.note}</span>` : '';
-
-      rows += `
-        <tr class="${rowClass}">
-          <td>${wkLabel}${noteSpan}</td>
-          ${cell('mon')}${cell('wed')}${cell('fri')}${cell('sat')}
-          <td><strong>${s.total}</strong></td>
-        </tr>`;
-    });
-
-    container.innerHTML += `
-      <div class="sched-phase">
-        <div class="phase-toggle${openClass}" onclick="togglePhase(this)">
-          <div class="toggle-left">
-            <span class="badge badge-${phase.toLowerCase()}">${phase}</span>
-            <span class="toggle-title">${phase} Phase</span>
-            <span class="toggle-meta">${phaseRange[phase]}</span>
-          </div>
-          <span class="chevron">▾</span>
-        </div>
-        <div class="phase-body${openClass}">
-          <table class="sched-tbl">
-            <thead>
-              <tr><th>Week</th><th>Mon</th><th>Wed</th><th>Fri</th><th>Sat</th><th>Total</th></tr>
-            </thead>
-            <tbody>${rows}</tbody>
-          </table>
-        </div>
-      </div>`;
-  });
-}
-
-function togglePhase(el) {
-  el.classList.toggle('open');
-  el.nextElementSibling.classList.toggle('open');
-}
-
-// ═══════════════════════════════
-// MODAL
-// ═══════════════════════════════
-let modalCtx = {wn:null, day:null};
-
-function openModal(wn, day) {
-  modalCtx = {wn, day};
-  const sched = SCHEDULE[wn - 1];
-  const planned = sched[day];
-  const log = getLog();
-  const entry = log['w' + wn + '-' + day] || {};
-  const runD = runDate(wn, DAY_OFFSETS[day]);
-
-  document.getElementById('modal-title').textContent = 'Log Run — ' + DAY_LABELS[day];
-  document.getElementById('modal-sub').textContent = 'Week ' + wn + '  ·  ' + fmtDate(runD) + '  ·  ' + sched.phase + ' Phase';
-  document.getElementById('modal-target').textContent = 'Target: ' + planned + ' mi  |  Easy pace 11:30–12:30/mi  |  HR ~130–140 bpm';
-
-  document.getElementById('f-dist').value  = entry.distance || '';
-  document.getElementById('f-time').value  = entry.time     || '';
-  document.getElementById('f-hr').value    = entry.hr       || '';
-  document.getElementById('f-loc').value   = entry.location || '';
-  document.getElementById('f-notes').value = entry.notes    || '';
-  document.getElementById('modal-pace-preview').textContent = entry.pace ? 'Recorded pace: ' + entry.pace + '/mi' : '';
-
-  document.getElementById('modal-ov').classList.add('open');
-}
-
-function closeModal() {
-  document.getElementById('modal-ov').classList.remove('open');
-}
-
-// Live pace preview
-document.getElementById('f-dist').addEventListener('input', updatePacePreview);
-document.getElementById('f-time').addEventListener('input', updatePacePreview);
-function updatePacePreview() {
-  const dist = document.getElementById('f-dist').value;
-  const time = document.getElementById('f-time').value;
-  const pace = calcPace(dist, time);
-  const el = document.getElementById('modal-pace-preview');
-  if (pace) {
-    const fast = isFastEasy(pace);
-    el.textContent = 'Calculated pace: ' + pace + '/mi' + (fast ? '  ⚠ faster than easy target' : '  ✓ good zone');
-    el.style.color = fast ? 'var(--alert)' : 'var(--sage-dark)';
-  } else {
-    el.textContent = '';
-  }
-}
-
-function saveRun() {
-  const {wn, day} = modalCtx;
-  const dist  = document.getElementById('f-dist').value;
-  const time  = document.getElementById('f-time').value;
-  const hr    = document.getElementById('f-hr').value;
-  const loc   = document.getElementById('f-loc').value;
-  const notes = document.getElementById('f-notes').value;
-
-  if (!dist || !time) { alert('Please enter distance and time.'); return; }
-
-  const pace = calcPace(dist, time);
-  const runD = runDate(wn, DAY_OFFSETS[day]);
-  const log = getLog();
-
-  log['w' + wn + '-' + day] = {
-    distance: parseFloat(dist),
-    time, pace, hr: hr ? parseInt(hr) : null,
-    location: loc, notes,
-    date: runD.getFullYear() + '-' + String(runD.getMonth()+1).padStart(2,'0') + '-' + String(runD.getDate()).padStart(2,'0')
-  };
-
-  saveLog(log);
-  closeModal();
-  renderAll();
-}
-
-// ═══════════════════════════════
-// EXPORT / IMPORT
-// ═══════════════════════════════
-function exportData() {
-  const log = getLog();
-  const json = JSON.stringify(log, null, 2);
-  const blob = new Blob([json], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'delaney-marathon-log.json';
-  a.click();
-  alert('Log exported! Paste this file (or its contents) into your Claude chat alongside your Garmin screenshot.');
-}
-
-function importData() {
-  const raw = document.getElementById('import-json').value.trim();
-  try {
-    const parsed = JSON.parse(raw);
-    saveLog(parsed);
-    renderAll();
-    document.getElementById('import-area').style.display = 'none';
-    document.getElementById('import-json').value = '';
-    alert('Data imported successfully!');
-  } catch(e) {
-    alert('Invalid JSON. Please paste the exported log file contents.');
-  }
-}
-
-// ═══════════════════════════════
-// RENDER ALL
-// ═══════════════════════════════
-function renderAll() {
-  renderHeader();
-  renderGlance();
-  renderCurrentWeek();
-  renderLog();
-  renderSchedule();
-}
-
-document.addEventListener('DOMContentLoaded', renderAll);
+});
+/* init filter visual: only "All" lit */
+document.querySelectorAll('.filt').forEach(x=>x.dataset.on=(x.dataset.f==='all')?'1':'0');
 </script>
 </body>
 </html>
