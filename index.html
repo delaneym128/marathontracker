@@ -206,11 +206,23 @@ const PLAN = [
  {n:5, phase:'Base', start:'2026-06-01', days:[
    {d:'Mon', plan:3,   actual:{dist:3.07,time:'33:17',pace:'10:50',hr:155,loc:'Arcadia Lakes',temp:84,note:'done Tue 6/2'}},
    {d:'Wed', plan:4,   actual:{dist:4.45,time:'45:07',pace:'10:09',hr:158,loc:'Forest Acres',temp:55,note:'done Thu 6/4 · cool'}},
-   {d:'Fri', plan:5},
+   {d:'Fri', plan:5,   actual:{dist:5.01,time:'50:39',pace:'10:07',hr:163,loc:'Arcadia Lakes',temp:72,note:'done Sat 6/6'}},
  ]},
- {n:6, phase:'Base', start:'2026-06-08', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:5}]},
- {n:7, phase:'Base', start:'2026-06-15', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:6}]},
- {n:8, phase:'Base', start:'2026-06-22', down:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:3}]},
+ {n:6, phase:'Base', start:'2026-06-08', days:[
+   {d:'Mon', plan:3, actual:{dist:3.04,time:'33:08',pace:'10:54',hr:146,loc:'Forest Acres',note:'lowest HR yet'}},
+   {d:'Wed', plan:4, actual:{dist:4.00,time:'44:18',pace:'11:04',hr:153,loc:'Forest Acres'}},
+   {d:'Fri', plan:5, actual:{dist:5.01,time:'51:40',pace:'10:19',hr:160,loc:'Forest Acres'}},
+ ]},
+ {n:7, phase:'Base', start:'2026-06-15', days:[
+   {d:'Mon', plan:3, actual:{dist:3.18,time:'33:19',pace:'10:29',hr:154,loc:'Forest Acres'}},
+   {d:'Wed', plan:4, actual:{dist:3.62,time:'38:29',pace:'10:39',hr:156,loc:'Forest Acres',note:'rain · short'}},
+   {d:'Fri', plan:6, actual:{dist:4.58,time:'50:15',pace:'10:58',hr:161,loc:'Atlanta',note:'Atlanta · hilly'}},
+ ]},
+ {n:8, phase:'Base', start:'2026-06-22', down:true, days:[
+   {d:'Mon', plan:2, actual:{dist:2.01,time:'19:54',pace:'9:55',hr:155,loc:'Forest Acres'}},
+   {d:'Wed', plan:3, actual:{dist:3.01,time:'32:02',pace:'10:39',hr:156,loc:'Forest Acres'}},
+   {d:'Fri', plan:3, actual:{dist:3.38,time:'34:35',pace:'10:14',hr:162,loc:'Forest Acres'}},
+ ]},
  {n:9, phase:'Development', start:'2026-06-29', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
  {n:10, phase:'Development', start:'2026-07-06', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
  {n:11, phase:'Development', start:'2026-07-13', days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:8}]},
