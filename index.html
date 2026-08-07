@@ -135,7 +135,7 @@
 
   <div class="callout">
     <h3>The one cue that matters right now</h3>
-    <p>Easy days should feel <b>almost too slow</b> — conversational, Zone 2, heart rate <b>130–140 bpm</b>. The aerobic engine is built by going slow, not fast. If HR climbs past the mid-140s, ease off or walk a few steps. Watch heart rate, not pace.</p>
+    <p>Easy days should feel <b>almost too slow</b> — conversational, Zone 2, heart rate <b>138–145 bpm</b> with a hard ceiling of <b>148</b>. The aerobic engine is built by going slow, not fast. If HR climbs past 148, ease off or walk a few steps. On runs over an hour, carry fluid — dehydration alone will push HR up 8–10 bpm at the same pace. Watch heart rate, not pace.</p>
   </div>
 
   <div class="filters" id="filters">
@@ -158,7 +158,7 @@
   </div>
 
   <div class="flag">
-    <b>Two numbers to confirm against your records:</b> Week&nbsp;5 Friday is shown as <b>5&nbsp;mi</b> per the original plan table (a June note had it as 4). And peak load reads <b>33&nbsp;mi</b> at Week&nbsp;23 in this per-run breakdown, while your design notes reference a 36-mile peak. The training logic is unchanged either way — just verify these two cells.
+    <b>Weeks 11 and 12 show empty Fridays on purpose</b> — those 8-milers were lost to illness and were not made up. Real outdoor temps are missing on runs from Jul&nbsp;27 onward; add them when convenient. <br><br><b>Weeks 14–15 long runs were adjusted</b> — Fri&nbsp;14 from 10&nbsp;mi to <b>8</b>, Fri&nbsp;15 from 11&nbsp;mi to <b>10</b> — to bridge safely from a 6-mile longest run. The 20-miler in Week&nbsp;23 and race day are unchanged.
   </div>
 
   <details class="howto">
@@ -223,13 +223,39 @@ const PLAN = [
    {d:'Wed', plan:3, actual:{dist:3.01,time:'32:02',pace:'10:39',hr:156,loc:'Forest Acres'}},
    {d:'Fri', plan:3, actual:{dist:3.38,time:'34:35',pace:'10:14',hr:162,loc:'Forest Acres'}},
  ]},
- {n:9, phase:'Development', start:'2026-06-29', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
- {n:10, phase:'Development', start:'2026-07-06', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:7}]},
- {n:11, phase:'Development', start:'2026-07-13', days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:8}]},
- {n:12, phase:'Development', start:'2026-07-20', days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:8}]},
- {n:13, phase:'Development', start:'2026-07-27', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:5},{d:'Sat',plan:4}]},
- {n:14, phase:'Development', start:'2026-08-03', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:10},{d:'Sat',plan:4}]},
- {n:15, phase:'Development', start:'2026-08-10', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:11},{d:'Sat',plan:4}]},
+ {n:9, phase:'Development', start:'2026-06-29', days:[
+   {d:'Mon', plan:3, actual:{dist:3.02,time:'31:46',pace:'10:31',hr:163,loc:'Forest Acres',temp:82}},
+   {d:'Wed', plan:4, actual:{dist:4.01,time:'44:20',pace:'11:04',hr:159,loc:'Forest Acres',temp:86}},
+   {d:'Fri', plan:7, actual:{dist:6.09,time:'1:03:35',pace:'10:26',hr:153,loc:'Forest Acres',temp:82,note:'Jul 4 · 2mi WU + 4mi race ~10:14/mi · neg split, 9:24 last mi'}},
+ ]},
+ {n:10, phase:'Development', start:'2026-07-06', days:[
+   {d:'Mon', plan:3, actual:{dist:3.01,time:'33:53',pace:'11:16',hr:152,loc:'Forest Acres',temp:84}},
+   {d:'Wed', plan:4, actual:{dist:3.52,time:'37:57',pace:'10:47',hr:156,loc:'Forest Acres',temp:86,note:'cough onset'}},
+   {d:'Fri', plan:7, actual:{dist:4.10,time:'45:22',pace:'11:03',hr:156,loc:'Ship Bottom, NJ',temp:84,note:'vacation · shortened'}},
+ ]},
+ {n:11, phase:'Development', start:'2026-07-13', days:[
+   {d:'Mon', plan:3, actual:{dist:4.01,time:'46:24',pace:'11:35',hr:159,loc:'Forest Acres',temp:84,note:'return from illness'}},
+   {d:'Wed', plan:5, actual:{dist:5.48,time:'1:02:39',pace:'11:27',hr:158,loc:'Forest Acres',temp:88}},
+   {d:'Fri', plan:8},
+ ]},
+ {n:12, phase:'Development', start:'2026-07-20', days:[
+   {d:'Mon', plan:3, actual:{dist:3.01,time:'32:58',pace:'10:58',hr:151,loc:'Forest Acres',temp:79}},
+   {d:'Wed', plan:5, actual:{dist:5.50,time:'~1:00:00',pace:'~10:55',hr:'&mdash;',loc:'Ravenwood loop',temp:75,note:'Jul 25 · first run back after HFMD · watch unstarted, est.'}},
+   {d:'Fri', plan:8},
+ ]},
+ {n:13, phase:'Development', start:'2026-07-27', sat:true, days:[
+   {d:'Mon', plan:3, actual:{dist:3.01,time:'35:38',pace:'11:51',hr:138,loc:'Forest Acres',note:'Jul 27 · first run in target Zone 2 band'}},
+   {d:'Wed', plan:4, actual:{dist:4.41,time:'50:26',pace:'11:26',hr:154,loc:'Arcadia Lakes',note:'Jul 29'}},
+   {d:'Fri', plan:5, actual:{dist:5.26,time:'56:04',pace:'10:40',hr:153,loc:'Forest Acres',note:'Jul 31'}},
+   {d:'Sat', plan:4, actual:{dist:5.19,time:'57:50',pace:'11:09',hr:152,loc:'Forest Acres',note:'Aug 1 · 2mi WU + 5K community race'}},
+ ]},
+ {n:14, phase:'Development', start:'2026-08-03', sat:true, days:[
+   {d:'Mon', plan:3, actual:{dist:3.18,time:'38:02',pace:'11:58',hr:140,loc:'Forest Acres',note:'Aug 3 · Zone 2 \u2713'}},
+   {d:'Wed', plan:4, actual:{dist:4.17,time:'47:26',pace:'11:22',hr:150,loc:'Forest Acres',note:'Aug 5'}},
+   {d:'Fri', plan:8, actual:{dist:8.00,time:'1:31:01',pace:'11:22',hr:156,loc:'Forest Acres',temp:74,note:'longest run ever · PR'}},
+   {d:'Sat', plan:4},
+ ]},
+ {n:15, phase:'Development', start:'2026-08-10', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:10},{d:'Sat',plan:4}]},
  {n:16, phase:'Development', start:'2026-08-17', down:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:4}]},
  {n:17, phase:'Peak', start:'2026-08-24', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:12},{d:'Sat',plan:5}]},
  {n:18, phase:'Peak', start:'2026-08-31', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:13},{d:'Sat',plan:5}]},
