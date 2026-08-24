@@ -162,7 +162,7 @@
   </div>
 
   <div class="flag">
-    <b>Skipped runs are marked and excluded from the totals</b> — Week&nbsp;11 Fri and Week&nbsp;12 Fri (illness), Week&nbsp;14 Sat and Week&nbsp;15 Sat (rest after back-to-back PRs). They were not made up, so progress reflects what is actually achievable.<br><br><b>Weeks 14–15 long runs were adjusted</b> — Fri&nbsp;14 from 10&nbsp;mi to <b>8</b>, Fri&nbsp;15 from 11&nbsp;mi to <b>10</b> — to bridge safely into the Peak build. Week&nbsp;23’s 20-miler and race day are unchanged.<br><br>Temps from Jul&nbsp;27 onward are <b>estimated air temps</b>, not device readings.
+    <b>Peak phase revised 24 Aug 2026.</b> The original block climbed 12\u201313\u201314\u201315\u201316\u201318\u201320 across seven straight weeks with no recovery. Revised: <b>cutback weeks at 19 and 22</b>, midweek runs grown so the long run is a smaller share of the week, one rolling route weekly for Charlotte\u2019s miles 14\u201322, and marathon-pace segments every other week. Peak long run is now <b>18 mi</b>; the 20 stays optional, decided after the 18 goes well. Total Weeks 17\u201323 drops only ~7 miles \u2014 this is redistribution, not a reduction.<br><br><b>Skipped runs are excluded from totals</b> \u2014 Wk&nbsp;11 Fri, Wk&nbsp;12 Fri (illness), Wk&nbsp;14 Sat, Wk&nbsp;15 Sat (rest after PRs).<br><br><b>Still open:</b> the taper runs five weeks from the Oct&nbsp;5 peak to race day \u2014 longer than typical. Under review separately. Temps from Jul&nbsp;27 onward are estimated air temps.
   </div>
 
   <details class="howto">
@@ -273,16 +273,46 @@ const PLAN = [
  ]},
  {n:17, phase:'Peak', start:'2026-08-24', sat:true, days:[
    {d:'Mon', plan:3, actual:{dist:3.30,time:'37:18',pace:'11:19',hr:148,loc:'Forest Acres',temp:73,note:'Aug 24 \u00b7 Peak phase opener \u00b7 HR at Z2 ceiling'}},
-   {d:'Wed', plan:5},
-   {d:'Fri', plan:12},
-   {d:'Sat', plan:5},
+   {d:'Wed', plan:5, focus:'easy \u00b7 Zone 2'},
+   {d:'Fri', plan:12, focus:'long \u00b7 start \u2264135, drift to 148 \u00b7 gels 45/75/105'},
+   {d:'Sat', plan:5, focus:'easy \u00b7 rolling route'},
  ]},
- {n:18, phase:'Peak', start:'2026-08-31', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:13},{d:'Sat',plan:5}]},
- {n:19, phase:'Peak', start:'2026-09-07', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:14},{d:'Sat',plan:5}]},
- {n:20, phase:'Peak', start:'2026-09-14', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:15},{d:'Sat',plan:5}]},
- {n:21, phase:'Peak', start:'2026-09-21', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:16},{d:'Sat',plan:5}]},
- {n:22, phase:'Peak', start:'2026-09-28', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:18},{d:'Sat',plan:5}]},
- {n:23, phase:'Peak', start:'2026-10-05', sat:true, longest:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:20},{d:'Sat',plan:5}]},
+ {n:18, phase:'Peak', start:'2026-08-31', sat:true, days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'marathon-pace intro \u00b7 2 easy / 2 @ 11:20\u201311:30 / 2 easy'},
+   {d:'Fri', plan:13, focus:'long \u00b7 aerobic \u00b7 gels 45/75/105'},
+   {d:'Sat', plan:5, focus:'easy \u00b7 rolling route'},
+ ]},
+ {n:19, phase:'Peak', start:'2026-09-07', sat:true, cutback:true, days:[
+   {d:'Mon', plan:3, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:5, focus:'easy \u00b7 rolling route'},
+   {d:'Fri', plan:8, focus:'cutback long \u00b7 caffeinated gel test run'},
+   {d:'Sat', plan:4, focus:'easy \u00b7 new shoes debut'},
+ ]},
+ {n:20, phase:'Peak', start:'2026-09-14', sat:true, days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'marathon pace \u00b7 2 easy / 3 @ 11:20\u201311:30 / 1 easy'},
+   {d:'Fri', plan:15, focus:'long \u00b7 rolling terrain \u00b7 full fuel rehearsal'},
+   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
+ ]},
+ {n:21, phase:'Peak', start:'2026-09-21', sat:true, days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'easy \u00b7 rolling route'},
+   {d:'Fri', plan:16, focus:'long \u00b7 final 3 mi at marathon effort'},
+   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
+ ]},
+ {n:22, phase:'Peak', start:'2026-09-28', sat:true, cutback:true, days:[
+   {d:'Mon', plan:3, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'marathon pace \u00b7 2 easy / 3 @ 11:20\u201311:30 / 1 easy'},
+   {d:'Fri', plan:12, focus:'cutback long \u00b7 rolling terrain'},
+   {d:'Sat', plan:4, focus:'easy \u00b7 Zone 2'},
+ ]},
+ {n:23, phase:'Peak', start:'2026-10-05', sat:true, longest:true, days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'easy \u00b7 rolling route'},
+   {d:'Fri', plan:18, focus:'peak long run \u00b7 full race rehearsal \u00b7 20 stays optional'},
+   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
+ ]},
  {n:24, phase:'Taper', start:'2026-10-12', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:12}]},
  {n:25, phase:'Taper', start:'2026-10-19', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:10}]},
  {n:26, phase:'Taper', start:'2026-10-26', days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:8}]},
@@ -355,7 +385,8 @@ function dayRow(d){
   return `<div class="day pending">
     <div class="check"></div>
     <div class="dname">${d.d}</div>
-    <div class="dbody"><div class="dplan"><b>${d.plan}</b> mi planned</div></div>
+    <div class="dbody"><div class="dplan"><b>${d.plan}</b> mi planned</div>
+    ${d.focus?`<div class="dmeta">${d.focus}</div>`:''}</div>
   </div>`;
 }
 
@@ -365,6 +396,7 @@ function weekCard(w){
   const isNow=w.n===curWeek;
   const tags=[];
   if(w.down)tags.push('<span class="downtag">down week</span>');
+  if(w.cutback)tags.push('<span class="downtag">cutback week</span>');
   if(w.longest)tags.push('<span class="downtag">longest run</span>');
   if(w.race)tags.push('<span class="downtag">race week</span>');
   const milesStr=done>0?`<b>${done.toFixed(1)}</b> / ${planm} mi`:`${planm} mi planned`;
