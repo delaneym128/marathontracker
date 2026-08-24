@@ -93,6 +93,10 @@
   .dmeta .cool{color:var(--taper)}
   .note{display:inline-block;font-size:10.5px;letter-spacing:.04em;color:var(--clay);background:#F6ECE2;border-radius:6px;padding:1px 7px;margin-left:2px}
   .pending{opacity:.62}
+  .day.skipped{opacity:.5}
+  .day.skipped .check{border-style:dashed}
+  .day.skipped .dplan{text-decoration:line-through}
+  .skiptag{display:inline-block;font-size:10.5px;letter-spacing:.04em;color:var(--soft-ink);background:#EFEADF;border-radius:6px;padding:1px 7px;margin-left:6px;text-decoration:none}
 
   /* ---- Pace guide ---- */
   .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 19px;margin:26px 0;box-shadow:var(--shadow)}
@@ -135,7 +139,7 @@
 
   <div class="callout">
     <h3>The one cue that matters right now</h3>
-    <p>Easy days should feel <b>almost too slow</b> — conversational, Zone 2, heart rate <b>138–145 bpm</b> with a hard ceiling of <b>148</b>. The aerobic engine is built by going slow, not fast. If HR climbs past 148, ease off or walk a few steps. On runs over an hour, carry fluid — dehydration alone will push HR up 8–10 bpm at the same pace. Watch heart rate, not pace.</p>
+    <p>Easy days should feel <b>almost too slow</b> — conversational, Zone 2, heart rate <b>138–145 bpm</b> with a hard ceiling of <b>148</b>. The aerobic engine is built by going slow, not fast. If HR climbs past 148, ease off or walk a few steps. Watch heart rate, not pace.</p>
   </div>
 
   <div class="filters" id="filters">
@@ -151,14 +155,14 @@
   <div class="panel">
     <h2>Pace Guide</h2>
     <div class="lede">Governed by heart rate first, pace second.</div>
-    <div class="pace"><div class="t">Easy<span>Conversational · HR Zone 2 (~130–140)</span></div><div class="v">11:30–12:30</div></div>
+    <div class="pace"><div class="t">Easy<span>Conversational · HR Zone 2 (138–145, ceiling 148)</span></div><div class="v">11:30–12:30</div></div>
     <div class="pace"><div class="t">Long<span>Slightly slower than easy · aerobic</span></div><div class="v">12:00–12:30</div></div>
     <div class="pace"><div class="t">Tempo<span>“Comfortably hard” · later phases</span></div><div class="v">10:30–11:00</div></div>
     <div class="pace"><div class="t">Race pace<span>The sub-5:00 goal · practiced in Peak</span></div><div class="v">~11:27</div></div>
   </div>
 
   <div class="flag">
-    <b>Weeks 11 and 12 show empty Fridays on purpose</b> — those 8-milers were lost to illness and were not made up. Real outdoor temps are missing on runs from Jul&nbsp;27 onward; add them when convenient. <br><br><b>Weeks 14–15 long runs were adjusted</b> — Fri&nbsp;14 from 10&nbsp;mi to <b>8</b>, Fri&nbsp;15 from 11&nbsp;mi to <b>10</b> — to bridge safely from a 6-mile longest run. The 20-miler in Week&nbsp;23 and race day are unchanged.
+    <b>Skipped runs are marked and excluded from the totals</b> — Week&nbsp;11 Fri and Week&nbsp;12 Fri (illness), Week&nbsp;14 Sat and Week&nbsp;15 Sat (rest after back-to-back PRs). They were not made up, so progress reflects what is actually achievable.<br><br><b>Weeks 14–15 long runs were adjusted</b> — Fri&nbsp;14 from 10&nbsp;mi to <b>8</b>, Fri&nbsp;15 from 11&nbsp;mi to <b>10</b> — to bridge safely into the Peak build. Week&nbsp;23’s 20-miler and race day are unchanged.<br><br>Temps from Jul&nbsp;27 onward are <b>estimated air temps</b>, not device readings.
   </div>
 
   <details class="howto">
@@ -167,6 +171,7 @@
       <li>Open <code>index.html</code> in any text editor and scroll to the line that says <code>const PLAN = [</code>.</li>
       <li>Find the week you ran, then the day (<code>Mon</code>, <code>Wed</code>, <code>Fri</code>, or <code>Sat</code>).</li>
       <li>Add an <code>actual</code> entry like this:<br><code>{d:'Fri', plan:5, actual:{dist:5.02, time:'53:40', pace:'10:41', hr:152, loc:'Forest Acres', temp:60}}</code></li>
+      <li>To mark a run skipped for good, add <code>skip:true</code> instead of an <code>actual</code>:<br><code>{d:'Sat', plan:4, skip:true, note:'why'}</code> &mdash; it drops out of the totals.</li>
       <li>Save the file. The checkmark, miles, and progress bar update automatically.</li>
       <li>To publish: in your GitHub repo choose <b>Add file → Upload files</b>, drag in the new <code>index.html</code>, and commit. The live site refreshes in a couple of minutes.</li>
     </ol>
@@ -236,12 +241,12 @@ const PLAN = [
  {n:11, phase:'Development', start:'2026-07-13', days:[
    {d:'Mon', plan:3, actual:{dist:4.01,time:'46:24',pace:'11:35',hr:159,loc:'Forest Acres',temp:84,note:'return from illness'}},
    {d:'Wed', plan:5, actual:{dist:5.48,time:'1:02:39',pace:'11:27',hr:158,loc:'Forest Acres',temp:88}},
-   {d:'Fri', plan:8},
+   {d:'Fri', plan:8, skip:true, note:'illness'},
  ]},
  {n:12, phase:'Development', start:'2026-07-20', days:[
    {d:'Mon', plan:3, actual:{dist:3.01,time:'32:58',pace:'10:58',hr:151,loc:'Forest Acres',temp:79}},
    {d:'Wed', plan:5, actual:{dist:5.50,time:'~1:00:00',pace:'~10:55',hr:'&mdash;',loc:'Ravenwood loop',temp:75,note:'Jul 25 · first run back after HFMD · watch unstarted, est.'}},
-   {d:'Fri', plan:8},
+   {d:'Fri', plan:8, skip:true, note:'illness (HFMD)'},
  ]},
  {n:13, phase:'Development', start:'2026-07-27', sat:true, days:[
    {d:'Mon', plan:3, actual:{dist:3.01,time:'35:38',pace:'11:51',hr:138,loc:'Forest Acres',note:'Jul 27 · first run in target Zone 2 band'}},
@@ -253,11 +258,25 @@ const PLAN = [
    {d:'Mon', plan:3, actual:{dist:3.18,time:'38:02',pace:'11:58',hr:140,loc:'Forest Acres',note:'Aug 3 · Zone 2 \u2713'}},
    {d:'Wed', plan:4, actual:{dist:4.17,time:'47:26',pace:'11:22',hr:150,loc:'Forest Acres',note:'Aug 5'}},
    {d:'Fri', plan:8, actual:{dist:8.00,time:'1:31:01',pace:'11:22',hr:156,loc:'Forest Acres',temp:74,note:'longest run ever · PR'}},
-   {d:'Sat', plan:4},
+   {d:'Sat', plan:4, skip:true, note:'rest after 8 mi PR'},
  ]},
- {n:15, phase:'Development', start:'2026-08-10', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:10},{d:'Sat',plan:4}]},
- {n:16, phase:'Development', start:'2026-08-17', down:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:4}]},
- {n:17, phase:'Peak', start:'2026-08-24', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:12},{d:'Sat',plan:5}]},
+ {n:15, phase:'Development', start:'2026-08-10', sat:true, days:[
+   {d:'Mon', plan:3,  actual:{dist:3.22,time:'38:08',pace:'11:51',hr:141,loc:'Arcadia Lakes',temp:76,note:'Aug 10 \u00b7 Zone 2 \u2713 \u00b7 temp est.'}},
+   {d:'Wed', plan:5,  actual:{dist:5.01,time:'55:09',pace:'11:00',hr:158,loc:'Forest Acres',temp:75,note:'Aug 12 \u00b7 temp est.'}},
+   {d:'Sat', plan:10, actual:{dist:10.01,time:'1:54:35',pace:'11:27',hr:158,loc:'Forest Acres',temp:74,note:'Sat Aug 15 \u00b7 fills Fri long-run slot \u00b7 longest run ever \u00b7 PR \u00b7 temp est.'}},
+   {d:'Sat', plan:4,  skip:true, note:'rest after 10 mi PR'},
+ ]},
+ {n:16, phase:'Development', start:'2026-08-17', down:true, days:[
+   {d:'Mon', plan:2, actual:{dist:2.00,time:'22:00',pace:'11:00',hr:147,loc:'Treadmill',note:'Aug 17 \u00b7 first treadmill run of the cycle \u00b7 + 400 m pool swim after'}},
+   {d:'Wed', plan:3, actual:{dist:2.88,time:'38:09',pace:'13:16',hr:134,loc:'Arcadia Lakes',temp:74,note:'Aug 19 \u00b7 under the weather \u00b7 lowest HR of cycle \u00b7 temp est.'}},
+   {d:'Fri', plan:4, actual:{dist:3.97,time:'46:21',pace:'11:40',hr:155,loc:'Arcadia Lakes',temp:74,note:'Aug 21 \u00b7 walked final \u00bd mi \u00b7 temp est.'}},
+ ]},
+ {n:17, phase:'Peak', start:'2026-08-24', sat:true, days:[
+   {d:'Mon', plan:3, actual:{dist:3.30,time:'37:18',pace:'11:19',hr:148,loc:'Forest Acres',temp:73,note:'Aug 24 \u00b7 Peak phase opener \u00b7 HR at Z2 ceiling'}},
+   {d:'Wed', plan:5},
+   {d:'Fri', plan:12},
+   {d:'Sat', plan:5},
+ ]},
  {n:18, phase:'Peak', start:'2026-08-31', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:13},{d:'Sat',plan:5}]},
  {n:19, phase:'Peak', start:'2026-09-07', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:14},{d:'Sat',plan:5}]},
  {n:20, phase:'Peak', start:'2026-09-14', sat:true, days:[{d:'Mon',plan:3},{d:'Wed',plan:5},{d:'Fri',plan:15},{d:'Sat',plan:5}]},
@@ -282,8 +301,9 @@ let curWeek=Math.floor((now-START)/MS_DAY/7)+1;
 if(curWeek<1)curWeek=1; if(curWeek>28)curWeek=28;
 
 /* ---- derive stats ---- */
-let totalRuns=0,doneRuns=0,doneMiles=0,planMiles=0;
+let totalRuns=0,doneRuns=0,doneMiles=0,planMiles=0,skipRuns=0;
 PLAN.forEach(w=>w.days.forEach(d=>{
+  if(d.skip){skipRuns++; return;}
   totalRuns++; planMiles+=d.plan;
   if(d.actual){doneRuns++; doneMiles+=d.actual.dist;}
 }));
@@ -308,7 +328,7 @@ setTimeout(()=>document.getElementById('progFill').style.width=pct+'%',180);
 
 /* ---- render weeks ---- */
 function weekDoneMiles(w){return w.days.reduce((s,d)=>s+(d.actual?d.actual.dist:0),0);}
-function weekPlanMiles(w){return w.days.reduce((s,d)=>s+d.plan,0);}
+function weekPlanMiles(w){return w.days.reduce((s,d)=>s+(d.skip?0:d.plan),0);}
 
 function dayRow(d){
   if(d.actual){
@@ -323,6 +343,14 @@ function dayRow(d){
         <div class="dactual"><span class="mi">${a.dist.toFixed(2)}</span> mi &middot; ${a.pace}/mi &middot; ${a.hr} bpm</div>
         <div class="dmeta">${a.loc} &middot; ${a.time}${tempStr}${noteStr}</div>
       </div></div>`;
+  }
+  if(d.skip){
+    return `<div class="day skipped">
+      <div class="check"></div>
+      <div class="dname">${d.d}</div>
+      <div class="dbody"><div class="dplan"><b>${d.plan}</b> mi planned</div></div>
+      <span class="skiptag">skipped${d.note?' · '+d.note:''}</span>
+    </div>`;
   }
   return `<div class="day pending">
     <div class="check"></div>
