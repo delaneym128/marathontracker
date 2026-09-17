@@ -162,7 +162,7 @@
   </div>
 
   <div class="flag">
-    <b>Peak phase revised 24 Aug 2026.</b> The original block climbed 12\u201313\u201314\u201315\u201316\u201318\u201320 across seven straight weeks with no recovery. Revised: <b>cutback weeks at 19 and 22</b>, midweek runs grown so the long run is a smaller share of the week, one rolling route weekly for Charlotte\u2019s miles 14\u201322, and marathon-pace segments every other week. Peak long run is now <b>18 mi</b>; the 20 stays optional, decided after the 18 goes well. Total Weeks 17\u201323 drops only ~7 miles \u2014 this is redistribution, not a reduction.<br><br><b>Skipped runs are excluded from totals</b> \u2014 Wk&nbsp;11 Fri, Wk&nbsp;12 Fri (illness), Wk&nbsp;14 Sat, Wk&nbsp;15 Sat, Wk&nbsp;17 Sat (rest after PRs).<br><br><b>Still open:</b> the taper runs five weeks from the Oct&nbsp;5 peak to race day \u2014 longer than typical. Under review separately. Temps from Jul&nbsp;27 onward are estimated air temps.
+    <b>Plan revised 17 Sep 2026: three run days and a 3-week taper.</b> Saturday runs are dropped from Week&nbsp;20 on (they were rarely happening). Midweek runs grow slightly so the long run stays a sensible share of the week. The peak 18&#8209;miler moves to <b>Week&nbsp;25 (Oct&nbsp;23)</b>, about three weeks before race day, with cutback weeks at 22 and 24. Peak week is now <b>30&nbsp;mi</b>; the 20 stays optional.<br><br><b>Skipped runs are excluded from totals</b> &mdash; Wk&nbsp;11 Fri, Wk&nbsp;12 Fri (illness), Wk&nbsp;14, 15, 17, 18, 19 Sat. Temps from Jul&nbsp;27 onward are estimated air temps unless noted.
   </div>
 
   <details class="howto">
@@ -289,35 +289,51 @@ const PLAN = [
    {d:'Fri', plan:8, actual:{dist:8.41,time:'1:42:08',pace:'12:09',hr:146,loc:'Forest Acres',note:'Sep 11 \u00b7 cutback long \u00b7 430 ft \u00b7 HR under Z2 ceiling \u2713 \u00b7 best long-run HR of the cycle \u00b7 ~34 min paused'}},
    {d:'Sat', plan:4, skip:true, note:'no Sat run'},
  ]},
- {n:20, phase:'Peak', start:'2026-09-14', sat:true, days:[
+ {n:20, phase:'Peak', start:'2026-09-14', days:[
    {d:'Mon', plan:4, actual:{dist:4.01,time:'48:11',pace:'12:01',hr:141,loc:'Forest Acres',note:'Sep 14 \u00b7 Zone 2 \u2713'}},
    {d:'Wed', plan:6, actual:{dist:6.83,time:'1:15:37',pace:'11:05',hr:155,loc:'Forest Acres',temp:85,note:'Sep 16 \u00b7 marathon-pace session \u00b7 361 ft \u00b7 TE 4.3 tempo \u00b7 max HR 174'}},
    {d:'Fri', plan:15, focus:'long \u00b7 rolling terrain \u00b7 full fuel rehearsal'},
-   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
  ]},
- {n:21, phase:'Peak', start:'2026-09-21', sat:true, days:[
-   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
-   {d:'Wed', plan:6, focus:'easy \u00b7 rolling route'},
+ {n:21, phase:'Peak', start:'2026-09-21', days:[
+   {d:'Mon', plan:5, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:7, focus:'easy \u00b7 rolling route'},
    {d:'Fri', plan:16, focus:'long \u00b7 final 3 mi at marathon effort'},
-   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
  ]},
- {n:22, phase:'Peak', start:'2026-09-28', sat:true, cutback:true, days:[
-   {d:'Mon', plan:3, focus:'easy \u00b7 Zone 2'},
+ {n:22, phase:'Peak', start:'2026-09-28', cutback:true, days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
    {d:'Wed', plan:6, focus:'marathon pace \u00b7 2 easy / 3 @ 11:20\u201311:30 / 1 easy'},
    {d:'Fri', plan:12, focus:'cutback long \u00b7 rolling terrain'},
-   {d:'Sat', plan:4, focus:'easy \u00b7 Zone 2'},
  ]},
- {n:23, phase:'Peak', start:'2026-10-05', sat:true, longest:true, days:[
+ {n:23, phase:'Peak', start:'2026-10-05', days:[
+   {d:'Mon', plan:5, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:7, focus:'easy \u00b7 rolling route'},
+   {d:'Fri', plan:16, focus:'long \u00b7 full fuel rehearsal'},
+ ]},
+ {n:24, phase:'Peak', start:'2026-10-12', cutback:true, days:[
    {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
    {d:'Wed', plan:6, focus:'easy \u00b7 rolling route'},
-   {d:'Fri', plan:18, focus:'peak long run \u00b7 full race rehearsal \u00b7 20 stays optional'},
-   {d:'Sat', plan:5, focus:'easy \u00b7 Zone 2'},
+   {d:'Fri', plan:12, focus:'cutback long \u00b7 rolling terrain'},
  ]},
- {n:24, phase:'Taper', start:'2026-10-12', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:12}]},
- {n:25, phase:'Taper', start:'2026-10-19', days:[{d:'Mon',plan:3},{d:'Wed',plan:4},{d:'Fri',plan:10}]},
- {n:26, phase:'Taper', start:'2026-10-26', days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:8}]},
- {n:27, phase:'Taper', start:'2026-11-02', days:[{d:'Mon',plan:2},{d:'Wed',plan:3},{d:'Fri',plan:6}]},
- {n:28, phase:'Taper', start:'2026-11-09', race:true, days:[{d:'Mon',plan:2},{d:'Wed',plan:2},{d:'Fri',plan:2.2}]},
+ {n:25, phase:'Peak', start:'2026-10-19', longest:true, days:[
+   {d:'Mon', plan:5, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:7, focus:'easy \u00b7 rolling route'},
+   {d:'Fri', plan:18, focus:'peak long run \u00b7 full race rehearsal \u00b7 20 stays optional'},
+ ]},
+ {n:26, phase:'Taper', start:'2026-10-26', days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:6, focus:'marathon pace \u00b7 2 easy / 3 @ 11:20\u201311:30 / 1 easy'},
+   {d:'Fri', plan:12, focus:'taper long \u00b7 relaxed'},
+ ]},
+ {n:27, phase:'Taper', start:'2026-11-02', days:[
+   {d:'Mon', plan:4, focus:'easy \u00b7 Zone 2'},
+   {d:'Wed', plan:5, focus:'2 easy / 2 @ marathon pace / 1 easy'},
+   {d:'Fri', plan:8, focus:'easy long \u00b7 last run over 5 mi'},
+ ]},
+ {n:28, phase:'Taper', start:'2026-11-09', race:true, days:[
+   {d:'Mon', plan:2, focus:'easy \u00b7 legs loose'},
+   {d:'Wed', plan:2, focus:'easy \u00b7 4 short strides'},
+   {d:'Fri', plan:2.2, focus:'shakeout \u00b7 race is Saturday'},
+ ]},
 ];
 
 const PHASE_COLOR={Base:'var(--sage)',Development:'var(--gold)',Peak:'var(--clay)',Taper:'var(--taper)'};
